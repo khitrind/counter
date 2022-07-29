@@ -16,30 +16,67 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LGO-Gn-bSS">
-                                <rect key="frame" x="82" y="527" width="251" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Increase"/>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cyr-G9-lXC">
-                                <rect key="frame" x="132" y="353" width="150" height="39.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cyr-G9-lXC">
+                                <rect key="frame" x="20" y="360" width="374" height="25.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Tf-l1-B2k">
+                                <rect key="frame" x="132" y="657" width="150" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="wJ4-yE-qZT"/>
+                                    <constraint firstAttribute="width" constant="150" id="xS3-yq-vgD"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Сбросить"/>
+                                <connections>
+                                    <action selector="reset" destination="BYZ-38-t0r" eventType="touchUpInside" id="Djz-sq-Ygj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DKR-Gb-T0V">
+                                <rect key="frame" x="132" y="612" width="55" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="55" id="Eoh-hL-AB5"/>
+                                    <constraint firstAttribute="height" constant="31" id="irz-gV-hKE"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="-"/>
+                                <connections>
+                                    <action selector="decreaseButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="kzW-c2-ERh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KQR-9t-WLm">
+                                <rect key="frame" x="226" y="612" width="56" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="ahM-xP-rRh"/>
+                                    <constraint firstAttribute="width" constant="56" id="hYc-Mz-aTM"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="+"/>
+                                <connections>
+                                    <action selector="increaseCounter:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IzX-gN-YhU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="LGO-Gn-bSS" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="89.5" id="0lh-6h-2ox"/>
                             <constraint firstItem="Cyr-G9-lXC" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-80.25" id="4bV-Hd-ZZ8"/>
-                            <constraint firstItem="LGO-Gn-bSS" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="8Z0-Wr-Ndt"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LGO-Gn-bSS" secondAttribute="trailing" constant="81" id="Djx-l7-Kqy"/>
-                            <constraint firstItem="Cyr-G9-lXC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="132" id="QWz-hG-yEh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4Tf-l1-B2k" secondAttribute="trailing" constant="132" id="79d-TD-SEm"/>
+                            <constraint firstItem="KQR-9t-WLm" firstAttribute="trailing" secondItem="4Tf-l1-B2k" secondAttribute="trailing" id="7K1-2i-1pY"/>
+                            <constraint firstItem="4Tf-l1-B2k" firstAttribute="top" secondItem="DKR-Gb-T0V" secondAttribute="bottom" constant="14" id="7ce-6z-MHT"/>
+                            <constraint firstItem="4Tf-l1-B2k" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="132" id="QGd-hw-Hz9"/>
+                            <constraint firstItem="Cyr-G9-lXC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="QWz-hG-yEh"/>
+                            <constraint firstItem="DKR-Gb-T0V" firstAttribute="leading" secondItem="4Tf-l1-B2k" secondAttribute="leading" id="d7P-a7-wTG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4Tf-l1-B2k" secondAttribute="bottom" constant="174" id="h2P-Zf-78f"/>
+                            <constraint firstItem="4Tf-l1-B2k" firstAttribute="top" secondItem="KQR-9t-WLm" secondAttribute="bottom" constant="14" id="oDx-wt-YSD"/>
                             <constraint firstItem="Cyr-G9-lXC" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="oUh-cC-tGj"/>
-                            <constraint firstItem="LGO-Gn-bSS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="82" id="sEM-wJ-3Fc"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="counterLabel" destination="Cyr-G9-lXC" id="xCe-ZS-uoK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
